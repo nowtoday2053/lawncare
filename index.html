@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Your Dream Lawn in 24 Hours | Zen Lawncare - #1 Local Experts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45)), 
+                        url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .hover-lift {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 25px rgba(34, 197, 94, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(34, 197, 94, 0.8); }
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #22c55e, #15803d, #16a34a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .floating {
+            animation: floating 4s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .typing {
+            overflow: hidden;
+            border-right: 3px solid #22c55e;
+            white-space: nowrap;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #22c55e; }
+        }
+        
+        .before-after {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .before-after::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.8s;
+        }
+        
+        .before-after:hover::before {
+            left: 100%;
+        }
+        
+        .countdown {
+            background: linear-gradient(45deg, #dc2626, #ef4444);
+            animation: urgency-pulse 1.5s infinite;
+        }
+        
+        @keyframes urgency-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .stars {
+            color: #fbbf24;
+            text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+        }
+    </style>
+</head>
+<body class="font-sans overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-green-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <i class="fas fa-leaf text-green-600 text-3xl mr-3 floating"></i>
+                    <span class="text-2xl font-black text-green-700">Zen Lawncare</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-green-600 font-semibold transition-all hover:scale-105">Home</a>
+                    <a href="#results" class="text-gray-700 hover:text-green-600 font-semibold transition-all hover:scale-105">Results</a>
+                    <a href="#services" class="text-gray-700 hover:text-green-600 font-semibold transition-all hover:scale-105">Services</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-green-600 font-semibold transition-all hover:scale-105">Reviews</a>
+                </div>
+                <button onclick="scrollToContact()" class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 rounded-full font-bold transition-all hover:scale-105 pulse-glow">
+                    Get FREE Quote
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-white relative">
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-black/20"></div>
+        <div class="text-center max-w-6xl mx-auto px-4 relative z-10">
+            <!-- Urgency Banner -->
+            <div class="countdown inline-block text-white px-6 py-2 rounded-full font-bold text-sm mb-6 fade-in" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">
+                🔥 LIMITED TIME: 50% OFF First Service - This Week Only!
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 fade-in leading-tight" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                Get Your <span class="text-gradient">Dream Lawn</span><br>
+                <span class="typing">in Just 24 Hours!</span>
+            </h1>
+            
+            <p class="text-lg md:text-2xl mb-8 fade-in font-medium text-green-100 max-w-4xl mx-auto leading-relaxed" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.7);">
+                Stop being embarrassed by your yard. Our experts transform ugly lawns into neighborhood showstoppers. 
+                <span class="text-yellow-300 font-semibold">Guaranteed results or your money back!</span>
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 fade-in">
+                <button onclick="scrollToContact()" class="bg-green-500 hover:bg-green-600 text-white px-10 py-5 rounded-full text-lg font-bold transition-all hover:scale-110 pulse-glow shadow-2xl">
+                    <i class="fas fa-rocket mr-3"></i>
+                    TRANSFORM MY YARD NOW
+                </button>
+                <div class="text-center sm:text-left">
+                    <div class="text-2xl font-bold text-yellow-300" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">FREE Quote in 5 Minutes</div>
+                    <div class="text-green-200" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">📞 Call Now:(385) 229-5646</div>
+                </div>
+            </div>
+            
+            <!-- Social Proof -->
+            <div class="flex flex-wrap justify-center items-center gap-8 text-green-100 fade-in">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-yellow-300">2,847+</div>
+                    <div class="text-sm">Happy Customers</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-yellow-300">4.9★</div>
+                    <div class="text-sm">Google Rating</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-yellow-300">24hr</div>
+                    <div class="text-sm">Quick Service</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-yellow-300">100%</div>
+                    <div class="text-sm">Satisfaction</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating CTA -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 floating">
+            <i class="fas fa-chevron-down text-white text-3xl opacity-70"></i>
+        </div>
+    </section>
+
+    <!-- Problem & Solution -->
+    <section class="py-20 bg-gradient-to-r from-red-50 to-orange-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Tired of Your <span class="text-red-600">UGLY YARD?</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                    Your neighbors have perfect lawns. Yours looks like a disaster zone. 
+                    <span class="font-bold text-red-600">You've tried everything.</span> 
+                    Nothing works. You're frustrated. Embarrassed. Ready to give up.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="text-center fade-in bg-white p-8 rounded-2xl shadow-lg hover-lift">
+                    <i class="fas fa-skull-crossbones text-6xl text-red-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Dead, Brown Grass</h3>
+                    <p class="text-gray-600">Your lawn looks like the Sahara Desert. Dead spots everywhere. Neighbors whisper.</p>
+                </div>
+                <div class="text-center fade-in bg-white p-8 rounded-2xl shadow-lg hover-lift">
+                    <i class="fas fa-bug text-6xl text-red-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Weeds Taking Over</h3>
+                    <p class="text-gray-600">More weeds than grass. Your yard is a jungle of dandelions and crabgrass.</p>
+                </div>
+                <div class="text-center fade-in bg-white p-8 rounded-2xl shadow-lg hover-lift">
+                    <i class="fas fa-clock text-6xl text-red-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">No Time to Fix It</h3>
+                    <p class="text-gray-600">You work 60+ hours a week. When do you have time for lawn care? Never.</p>
+                </div>
+            </div>
+            
+            <div class="text-center bg-green-600 text-white p-8 md:p-12 rounded-3xl fade-in max-w-5xl mx-auto">
+                <h3 class="text-3xl md:text-4xl font-bold mb-4">WE FIX IT ALL!</h3>
+                <p class="text-lg md:text-xl mb-6 leading-relaxed">
+                    In just 24 hours, we turn your disaster into your neighborhood's BEST lawn. 
+                    <span class="text-yellow-300 font-semibold">Guaranteed!</span>
+                </p>
+                <button onclick="scrollToContact()" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-4 rounded-full text-lg font-bold transition-all hover:scale-105 shadow-lg">
+                    YES! SAVE MY LAWN →
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Results -->
+    <section id="results" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                    <span class="text-gradient">INCREDIBLE</span> Transformations
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
+                    See how we transformed these disaster lawns into neighborhood showstoppers. 
+                    <span class="text-yellow-300 font-bold">Your lawn is next!</span>
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Before/After 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-2xl hover-lift before-after fade-in">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beautiful lawn transformation" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            AFTER
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Johnson Family</h4>
+                        <p class="text-gray-600">"From dead grass to the best lawn on the block in just one day!"</p>
+                        <div class="stars mt-2">★★★★★</div>
+                    </div>
+                </div>
+
+                <!-- Before/After 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-2xl hover-lift before-after fade-in">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Landscaping transformation" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            AFTER
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Martinez Home</h4>
+                        <p class="text-gray-600">"Unbelievable! Our property value increased $15,000!"</p>
+                        <div class="stars mt-2">★★★★★</div>
+                    </div>
+                </div>
+
+                <!-- Before/After 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-2xl hover-lift before-after fade-in">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1574880626896-d26bb546c99d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Garden makeover" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            AFTER
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Smith Property</h4>
+                        <p class="text-gray-600">"Neighbors ask for our secret. We just say 'Zen Lawncare'!"</p>
+                        <div class="stars mt-2">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 fade-in">
+                <button onclick="scrollToContact()" class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-10 py-5 rounded-full text-2xl font-black transition-all hover:scale-105 pulse-glow">
+                    GET MY TRANSFORMATION →
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Everything Your <span class="text-gradient">DREAM LAWN</span> Needs
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto">
+                    We handle EVERYTHING. You sit back and watch your yard become the envy of the neighborhood.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 hover-lift scale-in border-2 border-green-200">
+                    <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mb-6 floating">
+                        <i class="fas fa-cut text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Perfect Lawn Mowing</h3>
+                    <p class="text-gray-600 mb-4 text-lg">Professional precision cutting. Every blade perfect. Weekly service that never disappoints.</p>
+                    <div class="text-green-600 font-bold text-xl">Starting at $49/visit</div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 hover-lift scale-in border-2 border-blue-200">
+                    <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mb-6 floating">
+                        <i class="fas fa-seedling text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Complete Landscaping</h3>
+                    <p class="text-gray-600 mb-4 text-lg">Total yard makeovers. From design to installation. Turn heads with your stunning landscape.</p>
+                    <div class="text-blue-600 font-bold text-xl">Custom Quote</div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 hover-lift scale-in border-2 border-purple-200">
+                    <div class="bg-purple-500 w-16 h-16 rounded-full flex items-center justify-center mb-6 floating">
+                        <i class="fas fa-leaf text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Seasonal Cleanup</h3>
+                    <p class="text-gray-600 mb-4 text-lg">Spring prep, fall cleanup. Your yard ready for every season. Always picture-perfect.</p>
+                    <div class="text-purple-600 font-bold text-xl">From $89</div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 hover-lift scale-in border-2 border-orange-200">
+                    <div class="bg-orange-500 w-16 h-16 rounded-full flex items-center justify-center mb-6 floating">
+                        <i class="fas fa-scissors text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Expert Trimming</h3>
+                    <p class="text-gray-600 mb-4 text-lg">Hedges, bushes, trees. Shaped to perfection. Professional results every time.</p>
+                    <div class="text-orange-600 font-bold text-xl">From $39</div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-8 hover-lift scale-in border-2 border-teal-200">
+                    <div class="bg-teal-500 w-16 h-16 rounded-full flex items-center justify-center mb-6 floating">
+                        <i class="fas fa-tint text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Smart Irrigation</h3>
+                    <p class="text-gray-600 mb-4 text-lg">Automated watering systems. Your lawn stays green. You save time and water.</p>
+                    <div class="text-teal-600 font-bold text-xl">From $299</div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8 hover-lift scale-in border-2 border-red-200">
+                    <div class="bg-red-500 w-16 h-16 rounded-full flex items-center justify-center mb-6 floating">
+                        <i class="fas fa-bug text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Pest & Weed Control</h3>
+                    <p class="text-gray-600 mb-4 text-lg">Eliminate weeds and pests. Eco-friendly solutions. Green lawn, no harmful chemicals.</p>
+                    <div class="text-red-600 font-bold text-xl">From $79</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-gradient-to-br from-green-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
+                    What Our <span class="text-gradient">Happy Customers</span> Say
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 testimonial-card fade-in">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="Michael Rodriguez" class="w-16 h-16 rounded-full mr-4 border-4 border-green-300">
+                        <div>
+                            <h4 class="font-bold text-xl text-gray-800">Michael Rodriguez</h4>
+                            <div class="stars text-2xl">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                        "Holy crap! These guys are AMAZING. My lawn was dead. Totally dead. 
+                        They came out and in ONE DAY it looked incredible. My wife cried happy tears. 
+                        Best money I ever spent."
+                    </p>
+                    <div class="text-sm text-gray-500 font-semibold">Verified Google Review</div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 testimonial-card fade-in">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="Sarah Chen" class="w-16 h-16 rounded-full mr-4 border-4 border-green-300 object-cover">
+                        <div>
+                            <h4 class="font-bold text-xl text-gray-800">Sarah Chen</h4>
+                            <div class="stars text-2xl">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                        "I was SO embarrassed by my yard. Weeds everywhere. Now? 
+                        Everyone stops to ask how we got it so perfect. 
+                        Zen Lawncare is pure magic. Worth every penny!"
+                    </p>
+                    <div class="text-sm text-gray-500 font-semibold">Verified Facebook Review</div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 testimonial-card fade-in">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="David Thompson" class="w-16 h-16 rounded-full mr-4 border-4 border-green-300">
+                        <div>
+                            <h4 class="font-bold text-xl text-gray-800">David Thompson</h4>
+                            <div class="stars text-2xl">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                        "These guys don't mess around. Fast, professional, incredible results. 
+                        My neighbors are jealous as hell. Called them back for my parents' house too. 
+                        Best lawn service ever!"
+                    </p>
+                    <div class="text-sm text-gray-500 font-semibold">Verified Yelp Review</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-green-600 to-green-800 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                    Get Your FREE Quote in <span class="text-yellow-300">60 Seconds</span>
+                </h2>
+                <p class="text-xl md:text-2xl mb-6">
+                    Fill out this form and we'll text you a custom quote immediately. 
+                    <span class="text-yellow-300 font-bold">No BS. No waiting.</span>
+                </p>
+                <div class="bg-red-500 inline-block px-6 py-2 rounded-full font-bold text-lg countdown">
+                    ⏰ 50% OFF EXPIRES IN 2 DAYS!
+                </div>
+            </div>
+            
+            <form id="contactForm" class="bg-white rounded-3xl p-8 md:p-12 text-gray-800 shadow-2xl fade-in">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-lg font-bold text-gray-700 mb-2">Your Name *</label>
+                        <input type="text" id="name" required class="w-full px-4 py-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-green-300 focus:border-green-500 transition-all text-lg">
+                    </div>
+                    <div>
+                        <label class="block text-lg font-bold text-gray-700 mb-2">Phone Number *</label>
+                        <input type="tel" id="phone" required class="w-full px-4 py-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-green-300 focus:border-green-500 transition-all text-lg" placeholder="(385) 229-5646">
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-lg font-bold text-gray-700 mb-2">Property Address *</label>
+                    <input type="text" id="address" required class="w-full px-4 py-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-green-300 focus:border-green-500 transition-all text-lg" placeholder="123 Main St, City, State 12345">
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-lg font-bold text-gray-700 mb-2">What Do You Need? *</label>
+                    <select id="service" required class="w-full px-4 py-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-green-300 focus:border-green-500 transition-all text-lg">
+                        <option value="">Choose your service...</option>
+                        <option value="Complete Lawn Makeover">Complete Lawn Makeover</option>
+                        <option value="Regular Lawn Maintenance">Regular Lawn Maintenance</option>
+                        <option value="Landscaping Design">Landscaping Design</option>
+                        <option value="Seasonal Cleanup">Seasonal Cleanup</option>
+                        <option value="Emergency Lawn Rescue">Emergency Lawn Rescue</option>
+                        <option value="Not Sure - Need Advice">Not Sure - Need Advice</option>
+                    </select>
+                </div>
+                
+                <div class="mb-8">
+                    <label class="block text-lg font-bold text-gray-700 mb-2">Tell Us About Your Yard</label>
+                    <textarea id="message" rows="4" class="w-full px-4 py-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-green-300 focus:border-green-500 transition-all text-lg" placeholder="Describe your lawn problems, what you want, yard size, etc."></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white py-6 px-6 rounded-xl text-2xl font-black transition-all hover:scale-105 pulse-glow shadow-2xl">
+                    <i class="fas fa-rocket mr-3"></i>
+                    GET MY FREE QUOTE NOW!
+                </button>
+                
+                <p class="text-center text-gray-600 mt-4 text-sm">
+                    🔒 Your information is safe and secure. We'll text you within 5 minutes.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-leaf text-3xl mr-3 text-green-400"></i>
+                        <span class="text-3xl font-black">Zen Lawncare</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 text-lg leading-relaxed">
+                        The #1 lawn transformation experts. We turn ugly yards into neighborhood showstoppers. 
+                        Guaranteed results or your money back!
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-green-600 hover:bg-green-700 w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-green-600 hover:bg-green-700 w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-green-600 hover:bg-green-700 w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110">
+                            <i class="fab fa-google text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4 text-green-400">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#home" class="hover:text-green-400 transition-colors text-lg">Home</a></li>
+                        <li><a href="#results" class="hover:text-green-400 transition-colors text-lg">Results</a></li>
+                        <li><a href="#services" class="hover:text-green-400 transition-colors text-lg">Services</a></li>
+                        <li><a href="#testimonials" class="hover:text-green-400 transition-colors text-lg">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4 text-green-400">Get In Touch</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center text-lg">
+                            <i class="fas fa-phone w-6 mr-3 text-green-400"></i>
+                            (385) 229-5646
+                        </li>
+                        <li class="flex items-center text-lg">
+                            <i class="fas fa-envelope w-6 mr-3 text-green-400"></i>
+                            Tpau2843@gmail.com
+                        </li>
+                        <li class="flex items-center text-lg">
+                            <i class="fas fa-clock w-6 mr-3 text-green-400"></i>
+                            24/7 Emergency Service
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p class="text-lg">&copy; 2024 Zen Lawncare. All rights reserved. | Transforming yards, creating dreams.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize EmailJS
+        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+        
+        // Animation observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission with SMS
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            
+            // Show loading state
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-3"></i>SENDING...';
+            submitButton.disabled = true;
+            
+            const formData = new FormData();
+            formData.append('name', document.getElementById('name').value);
+            formData.append('phone', document.getElementById('phone').value);
+            formData.append('address', document.getElementById('address').value);
+            formData.append('service', document.getElementById('service').value);
+            formData.append('message', document.getElementById('message').value);
+            
+            // Send to backend
+            fetch('contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Show success message
+                    alert(data.message);
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    // Track conversion (Google Analytics, Facebook Pixel, etc.)
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'conversion', {
+                            'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+                            'value': 1.0,
+                            'currency': 'USD'
+                        });
+                    }
+                } else {
+                    alert('Sorry, there was an error. Please call us directly at (385) 229-5646');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Fallback for no backend
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                alert(`Thanks ${name}! We'll text you a quote at ${phone} within 5 minutes!`);
+                this.reset();
+            })
+            .finally(() => {
+                // Reset button
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+            });
+        });
+
+        // Add initial hero animations
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelectorAll('#home .fade-in').forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add('visible');
+                    }, index * 200);
+                });
+            }, 500);
+        });
+
+        // Parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-bg');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+    </script>
+</body>
+</html> 
