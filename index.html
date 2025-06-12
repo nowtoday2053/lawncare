@@ -144,6 +144,11 @@
         
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+        
+        section {
+            scroll-margin-top: 100px;
         }
         
         .testimonial-card {
@@ -184,9 +189,9 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-white relative">
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-white relative pb-16">
         <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-black/20"></div>
-        <div class="text-center max-w-6xl mx-auto px-4 relative z-10">
+        <div class="text-center max-w-6xl mx-auto px-4 relative z-10 py-8">
             <!-- Urgency Banner -->
             <div class="countdown inline-block text-white px-6 py-2 rounded-full font-bold text-sm mb-6 fade-in" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">
                 🔥 LIMITED TIME: 50% OFF First Service - This Week Only!
@@ -214,31 +219,31 @@
             </div>
             
             <!-- Social Proof -->
-            <div class="flex flex-wrap justify-center items-center gap-8 text-green-100 fade-in">
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-yellow-300">2,847+</div>
-                    <div class="text-sm">Happy Customers</div>
+            <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-green-100 fade-in mb-8">
+                <div class="text-center px-2">
+                    <div class="text-2xl md:text-3xl font-bold text-yellow-300" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">2,847+</div>
+                    <div class="text-xs md:text-sm" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">Happy Customers</div>
                 </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-yellow-300">4.9★</div>
-                    <div class="text-sm">Google Rating</div>
+                <div class="text-center px-2">
+                    <div class="text-2xl md:text-3xl font-bold text-yellow-300" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">4.9★</div>
+                    <div class="text-xs md:text-sm" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">Google Rating</div>
                 </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-yellow-300">24hr</div>
-                    <div class="text-sm">Quick Service</div>
+                <div class="text-center px-2">
+                    <div class="text-2xl md:text-3xl font-bold text-yellow-300" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">24hr</div>
+                    <div class="text-xs md:text-sm" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">Quick Service</div>
                 </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-yellow-300">100%</div>
-                    <div class="text-sm">Satisfaction</div>
+                <div class="text-center px-2">
+                    <div class="text-2xl md:text-3xl font-bold text-yellow-300" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">100%</div>
+                    <div class="text-xs md:text-sm" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">Satisfaction</div>
                 </div>
             </div>
         </div>
         
         <!-- Floating CTA -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 floating">
-            <i class="fas fa-chevron-down text-white text-3xl opacity-70"></i>
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 floating hidden md:block">
+            <i class="fas fa-chevron-down text-white text-2xl opacity-50"></i>
         </div>
-    </section>
+        </section>
 
     <!-- Problem & Solution -->
     <section class="py-20 bg-gradient-to-r from-red-50 to-orange-50">
@@ -249,8 +254,7 @@
                 </h2>
                 <p class="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
                     Your neighbors have perfect lawns. Yours looks like a disaster zone. 
-                    <span class="font-bold text-red-600">You've tried everything.</span> 
-                    Nothing works. You're frustrated. Embarrassed. Ready to give up.
+                    You're frustrated. Embarrassed. Ready to give up.
                 </p>
             </div>
             
